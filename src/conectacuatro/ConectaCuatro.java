@@ -5,17 +5,14 @@
  */
 package conectacuatro;
 
-/**
- *
- * @author juano
- */
+
 public class ConectaCuatro {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-   
+        Tablero T = new Tablero(6,7);
+        
+        T.pintaTablero();
     }
     
 }
