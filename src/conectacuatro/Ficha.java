@@ -10,10 +10,18 @@ package conectacuatro;
  * @author juano
  */
 public class Ficha {
+    
+    char color;
+        
+    public Ficha(char color){
+        this.color = color;
+    }
+    
     public Ficha(){
-        int columnaPos;
-        int filaPos;
-        char color;
+    }
+
+    public char getColor() {
+        return color;
     }
     
 }
