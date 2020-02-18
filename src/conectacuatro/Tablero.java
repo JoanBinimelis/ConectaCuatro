@@ -10,13 +10,14 @@ public class Tablero {
         
         int columnas;
         int filas;
-        Ficha[][] tablero = new Ficha[filas][columnas];
+        Ficha[][] tablero ;
         int torn = 1;
         
         
-    public Tablero(int filas, int columnas, Jugador jugador1, Jugador jugador2){
+    public Tablero(int filas, int columnas){
         this.columnas = columnas;
         this.filas = filas;
+        tablero = new Ficha[filas][columnas];
     
     }
     
@@ -35,12 +36,12 @@ public class Tablero {
     }
     
     public boolean compruebaLlena(int columna){
-        return tablero[0][columna] != null;
+        return tablero[0][columna] != null;           
     }
     
     public void colocaFicha(int columna){
         while (!compruebaLlena(columna)){
-            for (int i = filas; i >= 0; i--) {
+            for (int i = filas-1; i >= 0; i--) {
                 if (tablero[i][columna] == null){
                     tablero[i][columna] = new Ficha();
                     break;

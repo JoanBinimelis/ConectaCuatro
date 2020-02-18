@@ -16,6 +16,9 @@ public class Jugador {
         this.nom = nom;
         this.color = color;
     }
+        public Jugador( char color){
+        this.color = color;
+    }
     
     public Jugador(int torn){
         this.torn = torn;

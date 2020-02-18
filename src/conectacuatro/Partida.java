@@ -36,25 +36,19 @@ public class Partida {
     
     public int seleccionaColumna (Jugador jugador1, Jugador jugador2){
         int columna;
-        
         if (torn % 2 != 0){
             System.out.println(jugador1.getNom() + ", Selecciona una columna: " );
-        
             columna = sc.nextInt();
-        
         } else {
             System.out.println(jugador2.getNom() + ", Selecciona una columna: " );    
-        
             columna = sc.nextInt();
         }
-        
         torn++;
-        
         return columna;
     }
     
-    public void jugada(){
-        
-    }
+//    public void jugada(){
+//        
+//    }
     
 }

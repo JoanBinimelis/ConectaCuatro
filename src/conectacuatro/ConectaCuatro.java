@@ -12,10 +12,10 @@ public class ConectaCuatro {
     public static void main(String[] args) {
         
         
-        Jugador jugador1 = new Jugador(null, 'V');
-        Jugador jugador2 = new Jugador(null,'G');
+        Jugador jugador1 = new Jugador('V');
+        Jugador jugador2 = new Jugador('G');
         Partida P = new Partida();
-        Tablero T = new Tablero(6, 7, jugador1, jugador2);
+        Tablero T = new Tablero(6, 7);
         
         P.seleccionaFicha(jugador1, jugador2);
         T.pintaTablero(jugador1, jugador2);
