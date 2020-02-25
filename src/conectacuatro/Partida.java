@@ -47,8 +47,4 @@ public class Partida {
         return columna;
     }
     
-//    public void jugada(){
-//        
-//    }
-    
 }

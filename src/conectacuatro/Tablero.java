@@ -25,10 +25,13 @@ public class Tablero {
         for (int i = 0; i < filas; i++) {
             System.out.println();
             for (int j = 0; j < columnas; j++) {
-                /*if (tablero[i][columnas] != null && torn % 2 != 0){
-                    System.out.println("[ " + jugador1.getColor() + " ]");
-                }*/
+                if (tablero[i][j] != null && torn % 2 != 0){
+                    System.out.print("[ " + jugador1.getColor() + " ]");
+                }else if (tablero[i][j] != null && torn % 2 == 0){
+                    System.out.print("[ " + jugador2.getColor() + " ]");
+                }else{
                 System.out.print("[ 0 ]");
+                }
             }
         }
         System.out.println();
@@ -39,14 +42,21 @@ public class Tablero {
         return tablero[0][columna] != null;           
     }
     
-    public void colocaFicha(int columna){
-        while (!compruebaLlena(columna)){
-            for (int i = filas-1; i >= 0; i--) {
-                if (tablero[i][columna] == null){
-                    tablero[i][columna] = new Ficha();
-                    break;
-                }   
+    public void colocaFicha(int columna, Tablero T, Jugador jugador1, Jugador jugador2){   
+            if (!compruebaLlena(columna)){
+                for (int i = filas-1; i >= 0; i--) {
+                    if (tablero[i][columna] == null){
+                        tablero[i][columna] = new Ficha();
+                        break;
+                    }   
+                }
+                T.pintaTablero(jugador1, jugador2);
+            }else{
+                System.out.println("Error");
             }
-        }
+    }
+    
+    public void comprobarCuatro(int columna){
+        
     }
 }

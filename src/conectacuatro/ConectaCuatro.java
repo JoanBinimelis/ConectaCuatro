@@ -17,9 +17,10 @@ public class ConectaCuatro {
         Partida P = new Partida();
         Tablero T = new Tablero(6, 7);
         
+        
         P.seleccionaFicha(jugador1, jugador2);
         T.pintaTablero(jugador1, jugador2);
-        T.colocaFicha(P.seleccionaColumna(jugador1, jugador2));
+        T.colocaFicha(P.seleccionaColumna(jugador1, jugador2), T, jugador1, jugador2);
          
     }
     
